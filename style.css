@@ -19,7 +19,7 @@ body {
 	font-size: 16px; /* font size as per style guide */
 	font-family: "Josefin Sans";
 	display: grid;
-	place-content: center;
+	place-content: top;
 	background: linear-gradient(
 		135deg,
 		hsl(0, 0%, 100%),
@@ -62,13 +62,12 @@ h6 {
 	font-weight: 300, 400, 600;
 }
 
-
 header {
 	padding: 1.75rem;
 }
 
 header img {
-	height: 1.50rem;
+	height: 1.5rem;
 	width: 6.5rem;
 }
 
@@ -104,7 +103,6 @@ header img {
 	color: hsl(0, 36%, 70%);
 }
 
-
 .info {
 	margin-block: 2rem;
 	font-size: 0.85rem;
@@ -139,7 +137,7 @@ input:focus {
 }
 
 input {
-		width: 90%;
+	width: 90%;
 }
 
 .img-box {
@@ -199,10 +197,11 @@ button:hover {
 @media (min-width: 600px) {
 	main {
 		display: grid;
-		grid-template-areas: "header hero"
-				     "content-section hero"
-				     "content-section hero"
-				     "footer footer";
+		grid-template-areas:
+			"header hero"
+			"content-section hero"
+			"content-section hero"
+			"footer hero";
 		grid-template-columns: 2fr 1fr;
 		background: url(./images/bg-pattern-desktop.svg);
 		background-repeat: no-repeat;
@@ -222,16 +221,46 @@ button:hover {
 		max-width: 70%;
 	}
 
-	.content-section p{
+	.info {
 		grid-area: content-section;
 		text-align: left;
+		font-size: 1.2rem;
 	}
 
 	.content-section h1 {
 		text-align: left;
+		font-size: 4rem;
+		line-height: 4rem;
 	}
 
 	header {
 		margin-left: 5.75rem;
+	}
+
+	.input-box {
+		height: 3.5rem;
+	}
+
+	input {
+		font-size: 0.95rem;
+	}
+
+	.img-box {
+
+	height: 3.5rem;
+	width: 4.85rem;
+	}
+
+	.error-text {
+	font-size: 1rem;
+	}
+
+	input {
+	font-size: 1.10rem;
+}
+
+	header img {
+	height: 2.5rem;
+	width: 7.75rem;
 	}
 }
